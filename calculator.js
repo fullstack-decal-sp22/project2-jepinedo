@@ -45,8 +45,15 @@ Hint: We need:
             //make functionality for symbol C
             //make functionality for symbol ← Hint: .substring might be helpful! 
             //make functionality for symbol = Hint: use operator variable. Also call a function we created already!
-            ...
-            else { //make functionality if symbol is an operator
+            if (symbol === "C") {
+                total = 0;
+                strbuffer = total.toString;
+                operator = "+";
+            } else if (symbol === "←") {
+                strbuffer = strbuffer.substring(0, (strbuffer.length - 2))
+            } else if (symbol === "=") {
+                calculations()
+            } else { //make functionality if symbol is an operator
             const intBuffer = parseInt(strbuffer);
             if (total === 0) {
                 ____________;
@@ -58,27 +65,27 @@ Hint: We need:
             }
         }
 
-      /*  FUNC DESCRIPTION: Write the function to set listeners. This is how we will make the HTML interactive with the JS!
-          This is where we sense when a user clicks a certain button and send this information to our buttonClicked function. */
-      function setListeners() {
-      //Hint: We want to select all buttons from html and make it so that something happens when you click on the buttons! querySelectorAll might be helpful
-          let ______ = document.________(________); 
-          for (item of ________) {
-          //Hint: addEventListener might be useful.
-          //Hint: event.target.innerText might be helpful. innerText return type is a string
-          }
-      }
+        /*  FUNC DESCRIPTION: Write the function to set listeners. This is how we will make the HTML interactive with the JS!
+            This is where we sense when a user clicks a certain button and send this information to our buttonClicked function. */
+        function setListeners() {
+        //Hint: We want to select all buttons from html and make it so that something happens when you click on the buttons! querySelectorAll might be helpful
+            let ______ = document.________(________); 
+            for (item of ________) {
+            //Hint: addEventListener might be useful.
+            //Hint: event.target.innerText might be helpful. innerText return type is a string
+            }
+        }
 
-      //Make sure to call setListeners!!!
-      ________________________
+        //Make sure to call setListeners!!!
+        ________________________
 
-      /*  FUNC DESCRIPTION: Now we will write the function that takes care of when a button is clicked. */
-      function buttonClicked(valueClicked) {
-          if (isNaN(parseInt(valueClicked))) { //NaN means "Not a Number"
-              //Hint: call a function we just created!
-          } else {
-              //Hint: call a function we just created!
-          }
-          ______________________ = ___________;
-      // Hint: we need to change what number appears on the screen! to change html, one listener you could use is querySelector
-      }
+        /*  FUNC DESCRIPTION: Now we will write the function that takes care of when a button is clicked. */
+        function buttonClicked(valueClicked) {
+            if (isNaN(parseInt(valueClicked))) { //NaN means "Not a Number"
+                //Hint: call a function we just created!
+            } else {
+                //Hint: call a function we just created!
+            }
+            ______________________ = ___________;
+        // Hint: we need to change what number appears on the screen! to change html, one listener you could use is querySelector
+        }
